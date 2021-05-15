@@ -6,9 +6,9 @@ OUTPUT_FORMAT(elf32-i386)
 SECTIONS
 {
     . = 0x200000;
-    __begin_start_text =.;
-    .start.text: ALIGN(4) { *(.start.text) }
-    __end_start_text= .;
+    __begin_start_text = .;
+    .start.text : ALIGN(4) { *(.start.text) }
+    __end_start_text = .;
 
     __begin_text = .;
     .text : ALIGN(4) { *(.text) }
