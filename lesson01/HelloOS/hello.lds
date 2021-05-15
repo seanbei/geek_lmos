@@ -11,11 +11,11 @@ SECTIONS
     __end_start_text= .;
 
     __begin_text = .;
-    .text : ALIGN(4) { (.text) }
+    .text : ALIGN(4) { *(.text) }
     __end_text = .;
 
     __begin_data = .;
-    .data : ALIGN(4) { (.data) }
+    .data : ALIGN(4) { *(.data) }
     __end_data = .;
 
     __begin_rodata = .;

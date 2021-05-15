@@ -34,10 +34,10 @@ build: ${HELLOOS_OBJS}
 
 link: ${HELLOOS_ELF}
 $(HELLOOS_ELF): $(HELLOOS_OBJS)
-	$(LD) $(LDFLAGS) -o $(HELLOOS_OBJS)
+	$(LD) $(LDFLAGS) -o $@ $(HELLOOS_OBJS)
 bin: $(HELLOOS_BIN)
 $(HELLOOS_BIN): $(HELLOOS_ELF)
-	$(OBJCOPY) $(OJCFLAGS) $< $@
+	$(OBJCOPY) $(OJCYFLAGS) $< $@
 
 %.o : %.asm
 	$(ASM) $(ASMBFLAGS) -o $@ $<
